@@ -133,24 +133,7 @@ VKURoomBooking/
 - **Key UI Components:** VKU Header with live available room counter, Search TextInput, Horizontal scrollable Building chips, Filter drawer for Room Type and Capacity (`≥10`, `≥20`, `≥40`, `≥60`), Responsive `FlatList` grid.
 - **Demonstrated Behavior:** Instantaneous filtering across 22 mock rooms with zero UI lag. Responsive layout automatically scales from 1 column on phone to 2 columns on tablet/landscape.
 
-```
-┌────────────────────────────────────────────────────────┐
-│ [VKU] ĐẶT PHÒNG HỌC & LAB             ● Trực tiếp     │
-│ Khoa Khoa Học Máy Tính • ĐH CNTT & TT Việt - Hàn       │
-│ [ 18 Phòng trống ]  │  [ 22 Tổng số phòng ]            │
-├────────────────────────────────────────────────────────┤
-│ [🔍 Tìm tên phòng, mã phòng, thiết bị...] [Bộ lọc (1)] │
-│ (⚡ Đang còn trống) [Tòa nhà A] [Tòa nhà B] [Tòa nhà C]│
-├────────────────────────────────────────────────────────┤
-│ ┌───────────────────────────┐ ┌──────────────────────┐ │
-│ │ [IMG]        ● Đang trống │ │ [IMG]   ● Đã có người│ │
-│ │ Lab A3-101       [35 chỗ] │ │ Phòng B1-204 [20 chỗ]│ │
-│ │ 📍 Tòa nhà A • Tầng 1     │ │ 📍 Tòa nhà B • Tầng 2│ │
-│ │ [Máy tính i7] [Điều hòa]  │ │ [Máy chiếu] [Bảng từ]│ │
-│ │ ★ 4.9        [Đặt phòng ➔]│ │ ★ 4.7      [Xem lịch]│ │
-│ └───────────────────────────┘ └──────────────────────┘ │
-└────────────────────────────────────────────────────────┘
-```
+![Home Page](./img/Home%20Page.jpg)
 
 ### 4.2 Screen 2: Interactive Time-Slot Selector & Conflict Engine (`TimeSlotModal`)
 
@@ -160,42 +143,20 @@ VKURoomBooking/
   - If the student already has a confirmed reservation at that same time in _any_ room: Badge shows **"Trùng lịch bạn"**, tapping triggers an alert: _"Trùng lịch học: Bạn đã có lịch đặt phòng [Tên phòng] vào ngày này."_
   - Legitimate slots highlight in VKU Blue (`#2563EB`) and enable the "Xác Nhận Đặt" action button.
 
-```
-┌────────────────────────────────────────────────────────┐
-│ LAB A3-101                                         [✕] │
-│ Phòng Lab Lập Trình Nâng Cao                           │
-│ 📍 Tòa nhà A • Tầng 1  •  👥 35 chỗ ngồi  •  ★ 4.9     │
-├────────────────────────────────────────────────────────┤
-│ 1. Chọn ngày đặt phòng:                                │
-│ [ Hôm nay (24/09) ]  [ Ngày mai (25/09) ]  [ Thứ 6 ]   │
-│                                                        │
-│ 2. Chọn khung giờ học:         ✓ Chống trùng lịch      │
-│ ┌───────────────────────────┐ ┌──────────────────────┐ │
-│ │ Sáng            Còn trống │ │ Sáng   Trùng lịch bạn│ │
-│ │ 07:30 - 09:30             │ │ 09:45 - 11:45        │ │
-│ └───────────────────────────┘ └──────────────────────┘ │
-│ ┌───────────────────────────┐ ┌──────────────────────┐ │
-│ │ Chiều         Đã có người │ │ Chiều      Còn trống │ │
-│ │ 13:00 - 15:00             │ │ 15:15 - 17:15        │ │
-│ └───────────────────────────┘ └──────────────────────┘ │
-│                                                        │
-│ 3. Mục đích sử dụng:                                   │
-│ [ Họp nhóm đồ án Lập trình Đa nền tảng               ] │
-├────────────────────────────────────────────────────────┤
-│ Đã chọn: 07:30 - 09:30 (Buổi Sáng)     [Xác Nhận Đặt]  │
-└────────────────────────────────────────────────────────┘
-```
+![Booking room](./img/Select%20Room.jpg)
 
 ### 4.3 Screen 3: Booking Management & Cancellation (`MyBookingsScreen`)
 
 - **Key UI Components:** Active confirmed card list, status pills (`✓ Đã xác nhận` in Emerald, `✕ Đã hủy` in Rose), booking reference code `#ID`, cancellation action with native confirmation modal.
 - **Demonstrated Behavior:** Canceling a booking prompts `Alert.alert("Hủy đặt phòng?", ...)`. Confirming immediately flips status to `✕ Đã hủy`, decrements active tab badges, and simultaneously restores slot availability in the room repository.
 
+![Booking Management](./img/Subcribe%20Room.jpg)
+
 ### 4.4 Screen 4: Digital Student ID & Regulations (`ProfileScreen`)
 
 - **Key UI Components:** VKU Smart Campus ID Card with student metadata (`Nguyễn Văn An`, MSSV `22IT001`, Khoa CNTT), daily booking quota counters, toggle switches for 15-minute reminders and email receipts, university room regulations, and IT emergency hotline.
 
----
+![Profile](./img/Profile.jpg)
 
 ## 5. TECHNICAL CHALLENGES & RESOLUTIONS
 

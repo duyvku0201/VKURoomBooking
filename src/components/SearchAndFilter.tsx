@@ -37,7 +37,7 @@ export function SearchAndFilter({ filter, onFilterChange, totalResults }: Search
             style={styles.input}
             value={filter.searchQuery}
             onChangeText={(text) => onFilterChange({ searchQuery: text })}
-            placeholder="Tìm tên phòng, mã phòng, thiết bị..."
+            placeholder="Tìm tên phòng, mã phòng..."
             placeholderTextColor="#94A3B8"
             returnKeyType="search"
             autoCapitalize="none"
