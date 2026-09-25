@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "VKURoomBooking",
-    "slug": "VKURoomBooking",
+    "slug": "vkur-room-booking",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,8 +28,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "bd7172a0-256a-48c6-940e-eb9e2ba8e6b7"
+        "projectId": "d83eae94-d372-4547-9870-8f76a9414d6d"
       }
-    }
+    },
+    "owner": "khapds-team"
   }
 }
